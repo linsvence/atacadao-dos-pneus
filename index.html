@@ -39,6 +39,7 @@
       height: auto;
       border-bottom: 1px solid #ddd;
       margin-bottom: 1rem;
+      cursor: pointer;
     }
     .product h2 {
       font-size: 1.2rem;
@@ -64,6 +65,64 @@
       width: 50px;
       margin: 0 0.5rem;
     }
+
+    /* Lightbox Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80%;
+    }
+    .modal-content:hover {
+      cursor: pointer;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      width: 60px;
+      height: 60px;
+      background-color: #25d366;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-float img {
+      width: 35px;
+      height: 35px;
+    }
   </style>
 </head>
 <body>
@@ -71,10 +130,13 @@
     <h1>Atacadão dos Pneus</h1>
     <p>Os melhores preços em pneus Wanli para o seu veículo</p>
   </header>
+
   <div class="container">
     <!-- Produto 1 -->
     <div class="product">
-      <img src="https://i.postimg.cc/Kjv2TVCB/Chat-GPT-Image-14-de-abr-de-2025-13-22-09.png" alt="Pneu Wanli S-1088 275/40R20">
+      <a href="https://example.com/compra1" target="_blank">
+        <img src="https://i.postimg.cc/Kjv2TVCB/Chat-GPT-Image-14-de-abr-de-2025-13-22-09.png" alt="Pneu Wanli S-1088 275/40R20" onclick="openModal(this.src)">
+      </a>
       <h2>Pneu Wanli S-1088 275/40R20</h2>
       <p>Índice de carga: 106 | Velocidade: W</p>
       <p class="price">R$ 610,90</p>
@@ -88,7 +150,9 @@
 
     <!-- Produto 2 -->
     <div class="product">
-      <img src="https://i.postimg.cc/zGbrfrRH/Chat-GPT-Image-14-de-abr-de-2025-16-06-09.png" alt="Pneu Wanli SL106 225/65R16">
+      <a href="https://example.com/compra2" target="_blank">
+        <img src="https://i.postimg.cc/zGbrfrRH/Chat-GPT-Image-14-de-abr-de-2025-16-06-09.png" alt="Pneu Wanli SL106 225/65R16" onclick="openModal(this.src)">
+      </a>
       <h2>Pneu Wanli SL106 225/65R16</h2>
       <p>Índice de carga: 112/110 | Velocidade: R</p>
       <p class="price">R$ 490,00</p>
@@ -102,7 +166,9 @@
 
     <!-- Produto 3 -->
     <div class="product">
-      <img src="https://i.postimg.cc/RFrsTrF8/terceiropneuwanli.png" alt="Pneu Wanli SU006 A/T 225/65R17">
+      <a href="https://example.com/compra3" target="_blank">
+        <img src="https://i.postimg.cc/RFrsTrF8/terceiropneuwanli.png" alt="Pneu Wanli SU006 A/T 225/65R17" onclick="openModal(this.src)">
+      </a>
       <h2>Pneu Wanli SU006 A/T 225/65R17</h2>
       <p>Índice de carga: 102 | Velocidade: T</p>
       <p class="price">R$ 569,00</p>
@@ -116,7 +182,9 @@
 
     <!-- Produto 4 -->
     <div class="product">
-      <img src="https://i.postimg.cc/L5m352Ct/Chat-GPT-Image-14-de-abr-de-2025-16-52-08.png" alt="Pneu Wanli Harmonic H220 185/60R15">
+      <a href="https://example.com/compra4" target="_blank">
+        <img src="https://i.postimg.cc/L5m352Ct/Chat-GPT-Image-14-de-abr-de-2025-16-52-08.png" alt="Pneu Wanli H220 185/60R15" onclick="openModal(this.src)">
+      </a>
       <h2>Pneu Wanli H220 185/60R15</h2>
       <p>Índice de carga: 84 | Velocidade: H</p>
       <p class="price">R$ 248,90</p>
@@ -130,7 +198,9 @@
 
     <!-- Produto 5 -->
     <div class="product">
-      <img src="https://i.postimg.cc/0yzFP0J8/39bd9fc2-df1f-4f29-9819-ef1dd1ffebca.png" alt="Pneu Wanli SP118 165/65R14">
+      <a href="https://example.com/compra5" target="_blank">
+        <img src="https://i.postimg.cc/0yzFP0J8/39bd9fc2-df1f-4f29-9819-ef1dd1ffebca.png" alt="Pneu Wanli SP118 165/65R14" onclick="openModal(this.src)">
+      </a>
       <h2>Pneu Wanli SP118 165/65R14</h2>
       <p>Índice de carga: 83 | Velocidade: T</p>
       <p class="price">R$ 235,00</p>
@@ -142,5 +212,30 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal -->
+  <div id="imgModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/5599999999999?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20pneus%20Wanli." 
+     class="whatsapp-float" target="_blank" title="Fale conosco pelo WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
+  <script>
+    function openModal(src) {
+      const modal = document.getElementById("imgModal");
+      const modalImg = document.getElementById("modalImg");
+      modal.style.display = "block";
+      modalImg.src = src;
+    }
+
+    function closeModal() {
+      document.getElementById("imgModal").style.display = "none";
+    }
+  </script>
 </body>
 </html>
