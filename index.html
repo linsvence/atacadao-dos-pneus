@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Atacadão dos Pneus</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,12 +15,28 @@
       padding: 0;
       background-color: #f8f8f8;
     }
+
     header {
-      background-color: #333;
+      background-color: #b30000;
       color: #fff;
-      padding: 1rem 0;
+      padding: 1.5rem 0;
       text-align: center;
     }
+
+    .logo-text {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 3rem;
+      margin: 0;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .subtext {
+      font-size: 1rem;
+      font-weight: normal;
+      margin-top: -0.5rem;
+    }
+
     .container {
       width: 90%;
       margin: 2rem auto;
@@ -24,6 +44,7 @@
       flex-wrap: wrap;
       justify-content: space-around;
     }
+
     .product {
       background-color: #fff;
       border: 1px solid #ddd;
@@ -34,6 +55,7 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: center;
     }
+
     .product img {
       max-width: 100%;
       height: auto;
@@ -41,26 +63,31 @@
       margin-bottom: 1rem;
       cursor: pointer;
     }
+
     .product h2 {
       font-size: 1.2rem;
       color: #333;
     }
+
     .product p {
       font-size: 1rem;
       color: #666;
       margin: 0.5rem 0;
     }
+
     .price {
       font-size: 1.5rem;
       color: #e60000;
       margin: 1rem 0;
     }
+
     .payment-methods {
       display: flex;
       justify-content: center;
       align-items: center;
       margin-top: 1rem;
     }
+
     .payment-methods img {
       width: 50px;
       margin: 0 0.5rem;
@@ -79,15 +106,18 @@
       overflow: auto;
       background-color: rgba(0,0,0,0.8);
     }
+
     .modal-content {
       margin: auto;
       display: block;
       max-width: 90%;
       max-height: 80%;
     }
+
     .modal-content:hover {
       cursor: pointer;
     }
+
     .close {
       position: absolute;
       top: 20px;
@@ -126,15 +156,19 @@
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <h1>Atacadão dos Pneus</h1>
-    <p>Os melhores preços em pneus Wanli para o seu veículo</p>
+    <h1 class="logo-text">Atacadão dos Pneus</h1>
+    <p class="subtext">Os melhores preços em pneus Wanli para o seu veículo</p>
   </header>
 
+  <!-- Produtos -->
   <div class="container">
+
     <!-- Produto 1 -->
     <div class="product">
-      <a href="https://example.com/compra1" target="_blank">
+      <a href="https://exemplo.com/compra1">
         <img src="https://i.postimg.cc/Kjv2TVCB/Chat-GPT-Image-14-de-abr-de-2025-13-22-09.png" alt="Pneu Wanli S-1088 275/40R20" onclick="openModal(this.src)">
       </a>
       <h2>Pneu Wanli S-1088 275/40R20</h2>
@@ -150,7 +184,7 @@
 
     <!-- Produto 2 -->
     <div class="product">
-      <a href="https://example.com/compra2" target="_blank">
+      <a href="https://exemplo.com/compra2">
         <img src="https://i.postimg.cc/zGbrfrRH/Chat-GPT-Image-14-de-abr-de-2025-16-06-09.png" alt="Pneu Wanli SL106 225/65R16" onclick="openModal(this.src)">
       </a>
       <h2>Pneu Wanli SL106 225/65R16</h2>
@@ -166,7 +200,7 @@
 
     <!-- Produto 3 -->
     <div class="product">
-      <a href="https://example.com/compra3" target="_blank">
+      <a href="https://exemplo.com/compra3">
         <img src="https://i.postimg.cc/RFrsTrF8/terceiropneuwanli.png" alt="Pneu Wanli SU006 A/T 225/65R17" onclick="openModal(this.src)">
       </a>
       <h2>Pneu Wanli SU006 A/T 225/65R17</h2>
@@ -182,7 +216,7 @@
 
     <!-- Produto 4 -->
     <div class="product">
-      <a href="https://example.com/compra4" target="_blank">
+      <a href="https://exemplo.com/compra4">
         <img src="https://i.postimg.cc/L5m352Ct/Chat-GPT-Image-14-de-abr-de-2025-16-52-08.png" alt="Pneu Wanli H220 185/60R15" onclick="openModal(this.src)">
       </a>
       <h2>Pneu Wanli H220 185/60R15</h2>
@@ -198,7 +232,7 @@
 
     <!-- Produto 5 -->
     <div class="product">
-      <a href="https://example.com/compra5" target="_blank">
+      <a href="https://exemplo.com/compra5">
         <img src="https://i.postimg.cc/0yzFP0J8/39bd9fc2-df1f-4f29-9819-ef1dd1ffebca.png" alt="Pneu Wanli SP118 165/65R14" onclick="openModal(this.src)">
       </a>
       <h2>Pneu Wanli SP118 165/65R14</h2>
